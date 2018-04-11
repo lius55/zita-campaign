@@ -1,0 +1,28 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>応募方法</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="main_area">
+	<div>
+		<img class="lazy" src="../img/pg3_1.jpg" >
+		<img class="lazy" data-original="../img/pg3_2.jpg" >
+		<img class="lazy" data-original="../img/pg3_3.jpg" >
+		<img class="lazy" data-original="../img/pg3_4.jpg" >
+		<img class="lazy" data-original="../img/pg3_5.jpg" >
+	</div>
+</div>
+
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/jquery.lazyload.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("img.lazy").lazyload({ threshold :700});
+});
+</script>
+</body>
+</html>
