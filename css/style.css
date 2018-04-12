@@ -124,7 +124,7 @@ a:link {
 	width: 1000px;
 	display: block;
 	display: -webkit-box;
-	margin: 0 auto;
+	margin: -1px auto 0px auto;
 }
 
 .footer {
