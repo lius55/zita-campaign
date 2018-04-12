@@ -1,0 +1,116 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ZitAキャンペーン</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="main_area">
+	<div>
+		<img class="lazy imgHeight" data-original="../img/bg1.jpg" >
+		<img class="lazy imgHeight" data-original="../img/bg2.jpg" >
+		<img class="lazy imgHeight" data-original="../img/bg3.jpg" >
+		<img class="lazy imgHeight" data-original="../img/bg4.jpg" >
+		<img class="lazy imgHeight" data-original="../img/bg5.jpg" >
+		<img class="lazy imgHeight" data-original="../img/bg6.jpg" >
+		<img class="lazy imgHeight" data-original="../img/bg7.jpg" >
+		<img class="lazy imgHeight" data-original="../img/bg8.jpg" >
+		<img class="lazy imgHeight" data-original="../img/bg9.jpg" >
+		<img class="lazy imgHeight" data-original="../img/bg10.jpg" >
+		<img class="lazy imgHeight" data-original="../img/bg11.jpg" >
+		<img class="lazy imgHeight" data-original="../img/bg12.jpg" >
+		<img class="lazy imgHeight" data-original="../img/bg13.jpg" >
+		<img class="lazy imgHeight" data-original="../img/bg14.jpg" >
+		<img class="lazy imgHeight" data-original="../img/bg15.jpg" >
+		<img class="lazy imgHeight" data-original="../img/bg16.jpg" >
+		<div class="" id="blue"></div>
+		<img class="lazy" style="height:296px" data-original="../img/bg17_1.jpg" >
+		<div class="bg_black center">
+			<input type="button" class="btn_blue"></input>
+		</div>
+		<img class="lazy" style="height:132px" data-original="../img/bg17_2.jpg" >
+		<div class="" id="green"></div>
+		
+		<img class="lazy" style="height:260px" data-original="../img/bg18_1.jpg" >
+		<div class="bg_black center">
+			<input type="button" class="btn_green"></input>
+		</div>
+		<img class="lazy" style="height:130px" data-original="../img/bg18_2.jpg" >
+		<div class="" id="red"></div>
+		<img class="lazy" style="height:180px" data-original="../img/bg19_1.jpg" >
+		<div class="bg_black center">
+			<input type="text" class="mail" placeholder="メールアドレスを入力"></input>
+		</div>
+		<img class="lazy" style="height:131px" data-original="../img/bg19_2.jpg" >
+		<div class="bg_black center">
+			<input type="button" class="btn_red" ></input>
+		</div>
+		<img class="lazy" data-original="../img/bg19_3.jpg" >
+
+		<img class="lazy" data-original="../img/bg20_1.jpg" >
+		<img class="lazy" data-original="../img/bg20_2.jpg" >
+		<div class="btn_area center">
+			<input type="button" class="btn blue guide"></input>
+			<input type="button" class="btn green guide"></input>
+			<input type="button" class="btn red guide"></input>
+		</div>
+</div>
+
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/jquery.lazyload.min.js"></script>
+<script>
+$(document).ready(function(){
+
+	$("img.lazy").lazyload({ threshold :700});
+
+	$("input.blue.guide").click(function(){
+		$("html,body").animate({scrollTop:$("#blue").offset().top},3000);
+	});
+
+	$("input.green.guide").click(function(){
+		$("html,body").animate({scrollTop:$("#green").offset().top},3000);
+	});
+
+	$("input.red.guide").click(function(){
+		$("html,body").animate({scrollTop:$("#red").offset().top},3000);
+	});
+	
+	$(".btn_blue").click(function(){
+		// Twitterページ
+		window.location.href="https://twitter.com/sakuradome";
+	});
+	$(".btn_green").click(function(){
+		// LINEリンク
+		window.location.href="https://line.me/R/ti/p/%40hmm1172h";
+	});
+
+	$(".btn_red").click(function(){
+		
+	alert("APIを呼び出し待ち");
+	//	$.ajax({
+	//		url : "",
+	//		data : "",
+	//		async : false
+	//		dataType : 'json',
+	//		type : 'POST',
+	//		headers : {
+	//			Accept : 'application/json, text/plain, */*',
+	//			'Content-Type' : 'application/json'
+	//		},
+	//		success : function(data) {
+	//			//window.location.href="about:_blank";
+	//		},
+	//		error : function(jqXHR, textStatus, errorThrown) {
+	//			//window.location.href = 'error.html';
+	//			alert("登録異常です。");
+	//		},
+	//	});
+		
+	});
+	
+});
+</script>
+</body>
+</html>
