@@ -100,27 +100,24 @@ a:link {
 	margin-left: 20px;
 }
 
-.blue_area_link {
+#blue {
 	background: url(../img/bg16_1.jpg) no-repeat center center;
 	width: 1000px;
 	height: 150px;
 	text-align: center;
-	cursor: pointer;
 }
 
-.green_area_link {
+#green {
 	background: url(../img/bg17_3.jpg) no-repeat center center;
 	width: 1000px;
 	height: 150px;
 	text-align: center;
-	cursor: pointer;
 }
 
-.red_area_link {
+#red {
 	background: url(../img/bg18_3.jpg) no-repeat center center;
 	width: 1000px;
 	height: 150px;
-	text-align: center;
 }
 
 .lazy {
@@ -165,6 +162,10 @@ a:link {
 }
 
 .note li{
+}
+
+.imgHeight {
+	height:700px;
 }
 
 @media only screen and (max-width:750px) {
