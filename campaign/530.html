@@ -64,7 +64,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<img class="lazy" src="../img/bg18_3.jpg" id="red">
 		<img class="lazy" src="../img/bg19_1.jpg" >
 		<div class="bg_black center">
-			<input type="text" class="mail" placeholder="メールアドレスを入力"></input>
+			<input type="text" class="mail" placeholder="メールアドレスを入力" id="email"></input>
 		</div>
 		<img class="lazy" src="../img/bg19_2.jpg" >
 		<div class="bg_black center">
@@ -127,27 +127,41 @@ $(document).ready(function(){
 		window.location.href="https://line.me/R/ti/p/%40hmm1172h";
 	});
 
+	var validateEmail = function(email) {
+	    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	    return re.test(String(email).toLowerCase());
+	}
+
 	$(".btn_red").click(function(){
 		
-	alert("APIを呼び出し待ち");
-	//	$.ajax({
-	//		url : "",
-	//		data : "",
-	//		async : false
-	//		dataType : 'json',
-	//		type : 'POST',
-	//		headers : {
-	//			Accept : 'application/json, text/plain, */*',
-	//			'Content-Type' : 'application/json'
-	//		},
-	//		success : function(data) {
-	//			//window.location.href="about:_blank";
-	//		},
-	//		error : function(jqXHR, textStatus, errorThrown) {
-	//			//window.location.href = 'error.html';
-	//			alert("登録異常です。");
-	//		},
-	//	});
+		var email = $("#email").val();
+		if (email.length < 1) { 
+			alert("メールアドレスを入力してください。");
+			return;
+		}
+		if (!validateEmail(email)) {
+			alert("正しいメールアドレスを入力してください。");
+			return;
+		}
+
+		$.ajax({
+			url : "/wp-json/campaign/email/regist",
+			data : JSON.stringify({ email: $("#email").val() }),
+			async : false,
+			dataType : 'json',
+			type : 'POST',
+			headers : {
+				Accept : 'application/json, text/plain, */*',
+				'Content-Type' : 'application/json'
+			},
+			success : function(data) {
+				window.location.href = "530pre1.html";
+			},
+			error : function(jqXHR, textStatus, errorThrown) {
+				//window.location.href = 'error.html';
+				alert("エラーが発生しました。");
+			},
+		});
 		
 	});
 	
