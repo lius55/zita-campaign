@@ -1,8 +1,23 @@
 
 body{
 	background: black;
-	font-family: A-OTF 新ゴ Pro R;
+	font-family: 'Source Sans Pro';
+	margin: 0;
+    font-weight: 400;
 }
+
+img { 
+	-webkit-touch-callout: none;
+}
+
+a {
+	color: #fcfcfc
+}
+
+a:hover {
+	color: #007acc;
+}
+
 .main_area {
 	width: 1000px;
 	margin: 0px auto;
@@ -27,13 +42,13 @@ body{
 }
 
 .btn {
-    width: 270px;
-    height: 70px;
-	border-radius: 11px;
-	border: 0px;
-	cursor: pointer;
-	margin-left: 35px;
-	background-size: cover !important;
+    width: 26%;
+    border-radius: 6px;
+    border: 0px;
+    cursor: pointer;
+    margin-left: 2.5%;
+    background-size: cover !important;
+    line-height: 5em;
 }
 
 .header_div {
@@ -50,32 +65,32 @@ a:link {
 
 .btn_blue {
 	background: url(../img/btn_blue24.png) no-repeat center center;
-    width: 505px;
-    height: 132px;
-	border-radius: 15px;
+	border-radius: 6px;
 	border: 0px;
 	cursor: pointer;
 	background-size: cover !important;
+    width: 50%;
+    line-height: 7em;
 }
 
 .btn_green {
 	background: url(../img/btn_green24.png) no-repeat center center;
-    width: 505px;
-    height: 132px;
-	border-radius: 15px;
+	border-radius: 6px;
 	border: 0px;
 	cursor: pointer;
 	background-size: cover !important;
+    width: 50%;
+    line-height: 7em;
 }
 
 .btn_red {
 	background: url(../img/btn_red24.png) no-repeat center center;
-    width: 505px;
-    height: 132px;
-	border-radius: 15px;
+	border-radius: 6px;
 	border: 0px;
 	cursor: pointer;
 	background-size: cover !important;
+    width: 50%;
+    line-height: 7em;
 }
 
 .bg_black{
@@ -96,28 +111,8 @@ a:link {
 
 .btn_area {
 	position: absolute;
-	top: 10px;
-	margin-left: 20px;
-}
-
-#blue {
-	background: url(../img/bg16_1.jpg) no-repeat center center;
-	width: 1000px;
-	height: 150px;
-	text-align: center;
-}
-
-#green {
-	background: url(../img/bg17_3.jpg) no-repeat center center;
-	width: 1000px;
-	height: 150px;
-	text-align: center;
-}
-
-#red {
-	background: url(../img/bg18_3.jpg) no-repeat center center;
-	width: 1000px;
-	height: 150px;
+	width: 100%;
+	margin-left: -1%;
 }
 
 .lazy {
@@ -136,36 +131,32 @@ a:link {
 	text-align: center;
 	margin: 0;
 	color: black;
-	font-size: 1em;
-	padding: 11px;
+    line-height: 1.7em;
 }
 
 .mail{
-    height: 60px;
-    width: 700px;
+    height: 1.5em;
+    width: 70%;
     border-radius: 5px;
     border: 0px;
-    font-size: 30px;
+    font-size: 1.5em;
     text-align: center;
+    line-height: 1.5em;
 }
 
 .note{
-	color: white;
+	color: #fcfcfc;
+	padding: 10px;
 }
 
 .note h2{
 	text-align: center;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
 }
 
 .note ul{
-    padding-left: 20px;
-}
-
-.note li{
-}
-
-.imgHeight {
-	height:700px;
+    padding-left: 1.5em;
 }
 
 @media only screen and (max-width:750px) {
@@ -175,16 +166,17 @@ a:link {
 	.lazy {
 		width: 100% !important;
 	}
-	.blue_area_link {
-		width: 100%;
+	.btn_blue {
+		line-height: 3.5em
 	}
-	.green_area_link {
-		width: 100%;
+	.btn_green {
+		line-height: 3.5em
 	}
-	.red_area_link {
-		width: 100%;
-	}
-	.note ul {
-		padding-left: 0px;
+	.btn_red {
+		line-height: 3.5em
 	}
 }
+
+@media only screen and (min-width: 316px){ html { font-size: 62.5% !important;} .btn {line-height: 2.5em;} } 
+@media only screen and (min-width: 640px){ html { font-size: 125% !important;} .btn {line-height: 4em;} } 
+@media only screen and (min-width: 750px){ html { font-size: 150% !important; } .btn {line-height: 5em;}} 
