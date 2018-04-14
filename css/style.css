@@ -159,6 +159,10 @@ a:link {
     padding-left: 1.5em;
 }
 
+#btn1,#btn2,#btn3,#btn4{
+	cursor: pointer;
+}
+
 @media only screen and (max-width:750px) {
 	.main_area {
 		width: 100% !important;
