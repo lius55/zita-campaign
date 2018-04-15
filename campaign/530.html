@@ -139,7 +139,7 @@ $(document).ready(function(){
 		}
 		$.ajax({
 			url : "/wp-json/campaign/email/regist",
-			data : JSON.stringify({ email: $("#email").val() }),
+			data : JSON.stringify({ email: email }),
 			async : false,
 			dataType : 'json',
 			type : 'POST',
